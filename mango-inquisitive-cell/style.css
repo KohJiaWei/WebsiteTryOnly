@@ -1,0 +1,40 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+.header-banner{  
+  width:100%;  
+}
+
+.product-image{
+  width:100%;
+}
+
+.content-container{
+  
+  padding: 15px;
+  
+}
+
+.product-card{
+  
+  border: 1px solid #C9C9C9;  
+  padding: 10px;
+  margin-bottom: 15px;
+  
+}
+
+footer {
+  padding: 15px;
+  background-color: brown;
+  color: white;
+}

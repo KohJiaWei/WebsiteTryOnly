@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- install localforage -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.9.0/localforage.js"></script>
+
+    <title>Cake Shop</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Lovely App" />
+    <link
+      rel="apple-touch-icon"
+      href="https://cdn.glitch.com/2345195f-6b17-42cd-9f14-8230736b8a90%2Ficon-512x512.png"
+    />
+
+    <meta name="description" content="My lovely new app" />
+
+    <meta name="theme-color" content="#2F3BA2" />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Start of Navigation Bar -->
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">Cake Shop</a>
+            <button id="butInstall" aria-label="Install" hidden></button>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              li><a href="#">Cart <span class="new badge cart-badge">0</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Navigation Bar on Mobile Devices -->
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Cart <span class="new badge cart-badge">0</span></a></li>
+          <a class="dropdown-trigger" href="#!" data-target="dropdown1"
+            >Dropdown<i class="material-icons right">arrow_drop_down</i></a
+          >
+        </li>
+      </ul>
+
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+      <!-- End of Navigation Bar -->
+
+      <!-- Start of Site Content -->
+
+      <!-- start of slider -->
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <img
+              src="https://cdn.glitch.com/f463b9e2-dd69-48e3-b5af-bc56aa4da342%2Fcake-banner.jpg?v=1602000049173"
+            />
+
+            <div class="caption center-align">
+              <h3>Best cake in town!</h3>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://cdn.glitch.com/f463b9e2-dd69-48e3-b5af-bc56aa4da342%2Fchocolate_brownies.jpg?v=1602000048739"
+            />
+
+            <div class="caption left-align">
+              <h3>Baked fresh daily!</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- end of slider -->
+
+      <div class="content-container">
+        <h1>Cakes for Sale!</h1>
+        <p>
+          We have the best cakes in Singapore! Start buying cakes from us today!
+        </p>
+
+        <div class="row">
+          <!-- start of Strawberry Cake Card -->
+          <div class="col s12 m6">
+            <div class="card product-card" data-price="24.95" data-productname = "Strawberry Cake">
+              <div class="card-image">
+                <img
+                  src="https://cdn.glitch.com/d74b4cbe-f008-4333-a29b-513dac9ab7f6%2Fstrawberry_cake.jpg?v=1600999977209"
+                />
+                <span class="card-title">Strawberry Cake</span>
+              </div>
+              <div class="card-content">
+                <p>
+                  Try our Strawberry Cake!
+                </p>
+              </div>
+              <div class="card-action">
+                <a class="modal-trigger" href="#strawberrycake-modal"
+                  >BUY THIS CAKE</a
+                >
+              </div>
+              <!-- Modal Structure -->
+              <div id="strawberrycake-modal" class="modal bottom-sheet">
+                <div class="modal-content">
+                  <div class="row">
+                    <div class="col s11 m11">
+                      <h4>Strawberry Cake</h4>
+                    </div>
+                    <div class="col s1 m1">
+                      <i class="material-icons">
+                        <a href="#!" class="modal-close">close</a></i
+                      >
+                    </div>
+                  </div>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Location</th>
+                        <th>Currency</th>
+                        <th>Item Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Singapore</td>
+                        <td>SGD</td>
+                        <td class="price-sgd"></td>
+                      </tr>
+                      <tr>
+                        <td>United States</td>
+                        <td>USD</td>
+                        <td class="price-usd"></td>
+                      </tr>
+                      <tr>
+                        <td>Japan</td>
+                        <td>JPY</td>
+                        <td class="price-jpy"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat add-to-cart-btn"
+                    >Add to Cart</a
+                  >
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                    >Close</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of Strawberry Cake Card -->
+
+          <!-- Start of Chocolate Brownie Card -->
+          <div class="col s12 m6">
+            <div class="card product-card" data-price="11.95" data-productname= "Chocolate Brownie">
+              <div class="card-image">
+                <img
+                  src="https://cdn.glitch.com/d74b4cbe-f008-4333-a29b-513dac9ab7f6%2Fchocolate_brownies.jpg?v=1600999975971"
+                />
+                <span class="card-title">Chocolate Brownie</span>
+              </div>
+              <div class="card-content">
+                <p>
+                  Try our Chocolate Brownie!
+                </p>
+              </div>
+              <div class="card-action">
+                <a class="modal-trigger" href="#chocolateBrownies-modal"
+                  >BUY THIS CAKE</a
+                >
+              </div>
+              <!-- Modal Structure -->
+              <div id="chocolateBrownies-modal" class="modal bottom-sheet">
+                <div class="modal-content">
+                  <div class="row">
+                    <div class="col s11 m11">
+                      <h4>Strawberry Cake</h4>
+                    </div>
+                    <div class="col s1 m1">
+                      <i class="material-icons">
+                        <a href="#!" class="modal-close">close</a></i
+                      >
+                    </div>
+                  </div>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Location</th>
+                        <th>Currency</th>
+                        <th>Item Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Singapore</td>
+                        <td>SGD</td>
+                        <td class="price-sgd"></td>
+                      </tr>
+                      <tr>
+                        <td>United States</td>
+                        <td>USD</td>
+                        <td class="price-usd"></td>
+                      </tr>
+                      <tr>
+                        <td>Japan</td>
+                        <td>JPY</td>
+                        <td class="price-jpy"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat add-to-cart-btn"
+                    >Add to Cart</a
+                  >
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                    >Close</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Chocolate Brownie Card -->
+        </div>
+      </div>
+
+      <!-- End of Site Content -->
+    </div>
+
+    <footer>
+      Copyright 2020. All Rights Reversed.
+      <script src="/scripts/register-sw.js"></script>
+      <script src="/scripts/init.js"></script>
+      <script src="/scripts/client.js"></script>
+      <script src="/scripts/home-page.js"></script>
+      <script src="/scripts/install.js"></script>
+    </footer>
+  </body>
+</html>

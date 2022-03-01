@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cake Shop</title>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Cake Shop</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+
+      <img
+        class="header-banner"
+        src="https://cdn.glitch.com/d74b4cbe-f008-4333-a29b-513dac9ab7f6%2Fcake-banner.jpg?v=1600999976489"
+      />
+
+      <div class="content-container">
+        <h1>Cakes for Sale!</h1>
+        <p>
+          We have the best cakes in Singapore! Start buying cakes from us today!
+        </p>
+
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="https://cdn.glitch.com/d74b4cbe-f008-4333-a29b-513dac9ab7f6%2Fstrawberry_cake.jpg?v=1600999977209"
+                />
+                <span class="card-title black-text">Strawberry Cake</span>
+              </div>
+              <div class="card-content">
+                <p>
+                  Try our Strawberry Cake!
+                </p>
+              </div>
+              <div class="card-action">
+                <a class="modal-trigger" href="#strawberrycake-modal"
+                  >BUY THIS CAKE</a
+                >
+              </div>
+
+              <!-- Modal Structure -->
+              <div id="strawberrycake-modal" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Header</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                    >Add to cart</a
+                  >
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                    >Close</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="https://cdn.glitch.com/d74b4cbe-f008-4333-a29b-513dac9ab7f6%2Fchocolate_brownies.jpg?v=1600999975971"
+                />
+                <span class="card-title">Chocolate Brownie</span>
+              </div>
+              <div class="card-content">
+                <p>
+                  Try our Chocolate Brownie!
+                </p>
+              </div>
+              <div class="card-action">
+                <a class="modal-trigger" href="#chocolateBrownie-modal"
+                  >BUY THIS CAKE</a>
+                <!-- Modal Structure -->
+            <div id="chocolateBrownie-modal" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Header</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                    >Add to cart</a
+                  >
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                    >Close</a
+                  >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+
+    <footer>
+      Copyright 2020. All Rights Reversed.
+    </footer>
+  </body>
+</html>
